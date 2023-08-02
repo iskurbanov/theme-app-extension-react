@@ -1,18 +1,49 @@
 {
-  "name": "my-node-app",
+  "name": "vite-app-extension",
   "version": "1.0.0",
   "main": "web/index.js",
   "license": "UNLICENSED",
   "scripts": {
+    "dev": "run-p -sr vite:dev shopify:dev",
+    "build": "run-s vite:build shopify:build",
+    "deploy": "run-s vite:build cleanup shopify:deploy",
     "shopify": "shopify",
-    "build": "shopify app build",
-    "dev": "shopify app dev",
-    "info": "shopify app info",
-    "generate": "shopify app generate",
-    "deploy": "shopify app deploy"
+    "shopify:build": "shopify app build",
+    "shopify:dev": "shopify app dev",
+    "shopify:info": "shopify app info",
+    "shopify:generate": "shopify app generate",
+    "shopify:deploy": "shopify app deploy",
+    "vite:dev": "vite",
+    "vite:build": "vite build",
+    "cleanup": "rimraf extensions/*/assets/*.{json,geetkeep}"
   },
   "dependencies": {
-    "@shopify/app": "^3.0.0",
-    "@shopify/cli": "^3.0.0"
+    "@shopify/app": "^3.48.0",
+    "@shopify/cli": "^3.48.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "clsx": "^2.0.0",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sort-by": "^1.2.0"
+  },
+  "author": "iskurbanov",
+  "private": true,
+  "workspaces": [
+    "web",
+    "web/frontend",
+    "frontend",
+    "extensions/*"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.26",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^4.4.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.4",
+    "vite-plugin-shopify": "^2.1.1"
   }
 }
