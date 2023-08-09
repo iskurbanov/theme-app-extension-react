@@ -15,7 +15,7 @@
     "shopify:deploy": "shopify app deploy",
     "vite:dev": "vite",
     "vite:build": "vite build",
-    "cleanup": "rimraf extensions/*/assets/*.{json,geetkeep}"
+    "cleanup": "rimraf --glob extensions/*/assets/*.{json,geetkeep}"
   },
   "dependencies": {
     "@shopify/app": "^3.48.0",
