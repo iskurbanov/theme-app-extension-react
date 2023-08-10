@@ -11,4 +11,6 @@ Here is an article on how to get started using this template:
 
 ## Additional Instructions + Learning
 
-I am working on releasing a Crash Course on building a full Shopify App with all the steps explained in detail. Check it out and pre-order here: <br /> 👉 [Shopify App Theme Extension Course](https://www.buildnextshop.com/shopify-theme-extension-app)
+Check it out the full course here:
+
+👉 [Shopify App Theme Extension Course](https://www.buildnextshop.com/shopify-theme-extension-app)
