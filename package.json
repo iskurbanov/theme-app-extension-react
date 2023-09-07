@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@shopify/app": "^3.48.0",
-    "@shopify/cli": "^3.48.0",
+    "@shopify/cli": "^3.49.1",
     "@vitejs/plugin-react": "^4.0.3",
     "clsx": "^2.0.0",
     "localforage": "^1.10.0",
